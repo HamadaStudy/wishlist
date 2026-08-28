@@ -1,6 +1,6 @@
 LAUNCH = "はい、何を追加しますか？"
 
-ADD_ITEM_SUCCESS = "あなたが追加したアイテムは {item} です。"
+ADD_ITEM_SUCCESS = "{items} を追加しました。"
 ADD_ITEM_NOT_HEARD = "申し訳ありません、アイテムが聞き取れません。"
 
 HELP = (

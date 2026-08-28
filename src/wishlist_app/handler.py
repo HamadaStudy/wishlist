@@ -3,6 +3,7 @@ import json
 import logging
 
 from . import messages
+from . import service
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -38,9 +39,9 @@ def handle_add_item(event):
             False,
         )
 
-    # TODO: サービスの呼び出し
+    added_items = service.add_items(user_utterance)
 
-    output_speech = messages.ADD_ITEM_SUCCESS.format(item=user_utterance)
+    output_speech = messages.ADD_ITEM_SUCCESS.format(items=added_items)
 
     return HandlerResult(
         output_speech,
