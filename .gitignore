@@ -15,3 +15,7 @@ wheels/
 # tmp
 tmp/
 _*
+
+# package
+lambda_package
+lambda.zip
