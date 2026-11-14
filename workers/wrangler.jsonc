@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wishlist-app",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    // Alexa Developer Console のスキルID (amzn1.ask.skill.xxxx)。空の場合はチェックしない
+    "ALEXA_SKILL_ID": "amzn1.ask.skill.46b59ccf-c08b-488e-9cd2-69c034373efb"
+  }
+  // OPENAI_API_KEY / NOTION_API_KEY は `wrangler secret put` で設定する
+}
