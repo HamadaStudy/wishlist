@@ -94,4 +94,13 @@ describe("handleAddItem", () => {
     expect(result).toEqual({ outputSpeech: messages.ADD_ITEM_NOT_HEARD, shouldEndSession: false });
     expect(addItems).not.toHaveBeenCalled();
   });
+
+  it("returns ADD_ITEM_NOTHING_ADDED when nothing was added", async () => {
+    const nothingAdded = vi.fn(async () => "");
+    const result = await handleAddItem(intentEvent("AddItemIntent", "スポンジボブ"), nothingAdded);
+    expect(result).toEqual({
+      outputSpeech: messages.ADD_ITEM_NOTHING_ADDED,
+      shouldEndSession: false,
+    });
+  });
 });

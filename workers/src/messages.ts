@@ -2,6 +2,8 @@ export const LAUNCH = "はい、何を追加しますか？";
 
 export const addItemSuccess = (items: string) => `${items} を追加しました。`;
 export const ADD_ITEM_NOT_HEARD = "申し訳ありません、アイテムが聞き取れません。";
+export const ADD_ITEM_NOTHING_ADDED =
+  "すみません、追加できるアイテムが見つかりませんでした。もう一度言ってください。";
 
 export const HELP =
   "追加したいものを言ってください。" +

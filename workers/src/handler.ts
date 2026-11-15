@@ -67,6 +67,10 @@ export async function handleAddItem(
 
   const addedItems = await addItems(userUtterance);
 
+  if (!addedItems) {
+    return { outputSpeech: messages.ADD_ITEM_NOTHING_ADDED, shouldEndSession: false };
+  }
+
   return { outputSpeech: messages.addItemSuccess(addedItems), shouldEndSession: false };
 }
 
